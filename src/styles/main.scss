@@ -1,3 +1,5 @@
+@import "../styles/utils/mixins";
+
 .page {
   font-family: 'Poppins', sans-serif;
 
@@ -6,16 +8,18 @@
   }
 }
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  box-sizing: border-box;
-  padding: 29px 23px 88px;
-  height: 100vh;
   background-size: cover;
   background-position: right;
-  background-image: url(../images/photo/main-cover-photo.png);
+  background-image: url(../images/photo/main-cover-photo.jpeg);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 29px 0 88px;
+    height: 100vh;
+  }
 
   &__logo-container {
     display: flex;
@@ -35,13 +39,53 @@
     color: #fff;
     letter-spacing: -1.5px;
     line-height: 100%;
+
+    @include onDesktop {
+      font-size: 80px;
+    }
+
+    @include onIpad {
+      font-size:64px;
+    }
   }
 
   &__phone-icon {
+    text-decoration: none;
     display: block;
     width: 18px;
     height: 18px;
-    background: url(../images/phone-icon.png) no-repeat;
+    background: url(../images/phone.svg) no-repeat;
+    background-size: contain;
+
+    @include onIpadAndDesktop {
+     width: 24px;
+     height: 24px;
+    }
+
+    @include onDesktop {
+      &::before {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 16px;
+        padding-right: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        content: "+1 234 555-55-55";
+        display: block;
+        color: #fff;
+        opacity: 0;
+        width: max-content;
+        position: relative;
+        top: 50%;
+        transform: translate(-100%, -50%);
+        pointer-events: none;
+      }
+
+      &:hover::before {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
   }
 
   &__menu-opener {
@@ -49,21 +93,42 @@
     display: block;
     width: 18px;
     height: 12px;
-    background-image: url(../images/menu.png);
+    background: url(../images/menu.svg) no-repeat;
+    background-size: contain;
+
+    @include onIpadAndDesktop {
+      width: 24px;
+      height: 16px;
+     }
+
+     &:hover {
+      background-image: url(../images/menu-hover.svg);
+      transform: rotate(180deg)
+    }
   }
-
-  &__menu-opener:hover {
-    background-image: url(../images/menu-hover.png);
-  }
-
-
 }
 
 .logo {
   display: flex;
   justify-content: center;
+
   &__image {
      height: 38px;
      width: 130px;
+
+     @include onIpadAndDesktop {
+      height: 56px;
+      width: 187px;
+     }
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1020px;
+  padding: 0 20px;
+
+  @include onDesktop {
+    padding: 0 40px;
   }
 }
