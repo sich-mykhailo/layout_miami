@@ -2,7 +2,7 @@
   background-color: $color-gray;
 
   &__cross {
-    grid-column:3 /-1;
+    grid-column: 3 /-1;
   }
 
   &__content {
@@ -43,8 +43,8 @@
     text-decoration: none;
 
     &:hover {
-     border-color: $color-dark;
-     transition: border-color 0.5s;
+      border-color: $color-dark;
+      transition: border-color 0.5s;
     }
   }
 
