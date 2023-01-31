@@ -11,21 +11,19 @@
     <script src="scripts/main.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">
+    <header class="header" hidden>
       <div class="container">
         <div class="header__content">
-          <div class="header__nav">
+          <div class="top-actions">
             <a href="#" class="logo">
               <img
                 class="logo__image"
-                src="images/logo-dark.svg"
+                src="images/logo-light.svg"
                 alt="my bike logo"
               >
             </a>
-            <div class="header__logo-container">
-              <a href="#" class="header__phone-icon"></a>
-              <a href="#" class="header__menu-opener"></a>
-            </div>
+            <a href="#" class="icon icon--phone header__phone-icon"></a>
+            <a href="#" class="icon icon--menu"></a>
           </div>
           <h1 class="h1 header__title">
             Take the Streets
@@ -33,5 +31,22 @@
         </div>
       </div>
     </header>
+    <nav class="menu">
+      <div class="container">
+        <div class="menu__content">
+          <div class="top-actions">
+            <a href="#" class="logo">
+              <img
+                class="logo__image"
+                src="images/logo-dark.svg"
+                alt="my bike logo"
+              >
+            </a>
+
+            <a href="#" class="icon icon--cross menu__cross"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
   </body>
 </html>
