@@ -1,7 +1,9 @@
 .page {
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 
   &__body {
+    background-color: $color-dark;
     margin: 0;
   }
 
@@ -17,5 +19,17 @@
     &:target {
       transform: translateX(0);
     }
+  }
+
+  &__section {
+    color: #fff;
+    letter-spacing: -1.5px;
+    font-weight: 500;
+    font-size: 32px;
+  }
+
+  &__section--title {
+
+    text-align: center;
   }
 }

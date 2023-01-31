@@ -39,11 +39,11 @@
     font-weight: 700;
     font-size: 22px;
     line-height: 22px;
-    color: $color-dark-menu;
+    color: $color-dark;
     text-decoration: none;
 
     &:hover {
-     border-color: $color-dark-menu;
+     border-color: $color-dark;
      transition: border-color 0.5s;
     }
   }
@@ -54,7 +54,7 @@
     font-weight: 700;
     align-items: center;
     text-transform: uppercase;
-    color: $color-dark-menu;
+    color: $color-dark;
 
     &--phone {
       margin-bottom: 16px;
@@ -68,7 +68,7 @@
       letter-spacing: 2px;
       line-height: 16px;
       padding-bottom: 8px;
-      border-bottom: 1px solid $color-dark-menu;
+      border-bottom: 1px solid $color-dark;
     }
   }
 }
