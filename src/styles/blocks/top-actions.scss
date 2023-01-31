@@ -1,0 +1,12 @@
+.top-actions {
+  --icon-width: 18px;
+  display: grid;
+  grid-template-columns: 1fr var(--icon-width) var(--icon-width) ;
+  justify-items: flex-start;
+  align-items: center;
+  column-gap: 20px;
+
+  @include onIpadAndDesktop {
+    --icon-width: 24px;
+  }
+}

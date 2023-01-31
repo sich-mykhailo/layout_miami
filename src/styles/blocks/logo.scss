@@ -1,0 +1,14 @@
+.logo {
+  display: flex;
+  justify-content: center;
+
+  &__image {
+     height: 38px;
+     width: 130px;
+
+     @include onIpadAndDesktop {
+      height: 56px;
+      width: 187px;
+     }
+  }
+}
